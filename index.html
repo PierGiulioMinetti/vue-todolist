@@ -17,8 +17,17 @@
             </div>
             <div class="search-bar">
                 <!-- input -->
-                <input v-model="modello" id="input"  @keyup.enter="add" type="text" placeholder="Nuovo to do">
-                <button @click="add">aggiungi</button>
+                <input 
+                    v-model="modello" 
+                    id="input"  
+                    @keyup.enter="add" 
+                    type="text" 
+                    placeholder="New to do"
+                >
+
+                <button 
+                    @click="add">aggiungi
+                </button>
             </div>
         </div>
         <!-- container to do -->
@@ -26,7 +35,11 @@
             <div class="to-do-content">
                <ul>
                    <li>
-                       <div v-for="element in lista" class="cancellami">{{element}}<i class="fas fa-trash-alt"></i></div>
+                       <div 
+                            v-for="(element, index) in lista"        class="cancellami">{{element}}<i 
+                            class="fas fa-trash-alt" @click="remove(index)">
+                            </i>
+                        </div>
                        
                    </li>
                </ul>

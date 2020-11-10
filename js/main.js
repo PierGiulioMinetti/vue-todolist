@@ -6,18 +6,9 @@ const cont = new Vue ({
     data: {
         modello: '',
         lista: [
-            // {
-
-            //    voce: 'fare la spesa 1'
-            // },
-            // {
-
-            //     voce: 'fare la spesa 2'
-            // },
-            // {
-
-            //     voce: 'fare la spesa 3'
-            // }
+            'vai a fare la spesa',
+            'compra il giornale',
+            'vai a fare benzina'
         ],
         
 
@@ -29,6 +20,9 @@ const cont = new Vue ({
     methods: {
         add(){
             this.lista.push(this.modello)
+        },
+        remove(index){
+            this.lista.splice(index);
         }
     }
     
