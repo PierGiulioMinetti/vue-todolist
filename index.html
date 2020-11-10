@@ -17,7 +17,7 @@
             </div>
             <div class="search-bar">
                 <!-- input -->
-                <input v-model="modello" id="input" type="text" placeholder="Nuovo to do">
+                <input v-model="modello" id="input"  @keyup.enter="add" type="text" placeholder="Nuovo to do">
                 <button @click="add">aggiungi</button>
             </div>
         </div>
@@ -26,7 +26,7 @@
             <div class="to-do-content">
                <ul>
                    <li>
-                       <div v-for="element in modello" class="cancellami">{{element}}<i class="fas fa-trash-alt"></i></div>
+                       <div v-for="element in lista" class="cancellami">{{element}}<i class="fas fa-trash-alt"></i></div>
                        
                    </li>
                </ul>

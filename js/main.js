@@ -4,11 +4,20 @@
 const cont = new Vue ({
     el: '#container',
     data: {
-        input: document.getElementById('input').value,
-        modello: [
-            'lavare i piatti',
-            'fare la spesa',
-            'comprare il pane',
+        modello: '',
+        lista: [
+            // {
+
+            //    voce: 'fare la spesa 1'
+            // },
+            // {
+
+            //     voce: 'fare la spesa 2'
+            // },
+            // {
+
+            //     voce: 'fare la spesa 3'
+            // }
         ],
         
 
@@ -18,8 +27,8 @@ const cont = new Vue ({
     //   console.log(this.input);
     },
     methods: {
-        pushare(){
-
+        add(){
+            this.lista.push(this.modello)
         }
     }
     
