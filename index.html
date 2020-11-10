@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'/>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <!-- container logo e search bar -->
+        <div class="container-logo-search">
+            <div class="logo">
+                <img src="https://www.boolean.careers/images/misc/logo.png" alt="">
+            </div>
+            <div class="search-bar">
+                <!-- input -->
+                <input v-model="modello" id="input" type="text" placeholder="Nuovo to do">
+                <button @click="add">aggiungi</button>
+            </div>
+        </div>
+        <!-- container to do -->
+        <div class="container-todo">
+            <div class="to-do-content">
+               <ul>
+                   <li>
+                       <div v-for="element in modello" class="cancellami">{{element}}<i class="fas fa-trash-alt"></i></div>
+                       
+                   </li>
+               </ul>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- js -->
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
