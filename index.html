@@ -34,13 +34,18 @@
         <div class="container-todo">
             <div class="to-do-content">
                <ul>
-                   <li>
+                   <li >
                        <div 
                             v-for="(element, index) in lista"        class="cancellami">{{element}}<i 
                             class="fas fa-trash-alt" @click="remove(index)">
                             </i>
                         </div>
                        
+                   </li>
+                   <li v-if="bool">
+                    la tua lista è vuota, creane una!
+                
+
                    </li>
                </ul>
 

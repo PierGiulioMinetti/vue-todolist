@@ -5,12 +5,14 @@ const cont = new Vue ({
     el: '#container',
     data: {
         modello: '',
+
         lista: [
-            'vai a fare la spesa',
-            'compra il giornale',
-            'vai a fare benzina'
+            // 'vai a fare la spesa',
+            // 'compra il giornale',
+            // 'vai a fare benzina'
         ],
-        
+
+        bool: false,
 
     },
 
@@ -23,15 +25,15 @@ const cont = new Vue ({
         },
         remove(index){
             this.lista.splice(index);
+        },
+        hide(){
+            if (this.lista.length == 0) {
+                bool = false;
+            } else {
+                bool = true;
+            }
         }
     }
+
     
 })
-
-// prendere input
-
-// prendere il valore da input
-
-// al click pushare in un array
-
-// v-for iterare sull'array e stampare tutto a schermo
