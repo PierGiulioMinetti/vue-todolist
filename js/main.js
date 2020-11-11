@@ -12,7 +12,6 @@ const cont = new Vue ({
             // 'vai a fare benzina'
         ],
 
-        bool: true,
 
     },
 
@@ -29,13 +28,7 @@ const cont = new Vue ({
         remove(index){
             this.lista.splice(index, 1);
         },
-        hide(){
-            if (this.lista.length == 0) {
-                this.bool = false;
-            } else {
-                this.bool = true;
-            }
-        }
+        
     }
 
     

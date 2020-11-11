@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet"> 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'/>
     <link rel="stylesheet" href="./css/style.css">
@@ -34,19 +35,20 @@
         <div class="container-todo">
             <div class="to-do-content">
                <ul>
-                    <li v-show="bool">
-                        la tua lista è vuota, creane una!
+                    <li id="lista-vuota" v-if="lista.length == 0 ">
+                        
+                        Crea una nuova lista!
 
                    </li>
-                   <li>
-                       <div
-                            v-for="(element, index) in lista"        class="cancellami"
-                            >
-                            {{element}}
-                            <i 
-                            class="fas fa-trash-alt" @click="remove(index)">
-                            </i>
-                        </div>
+                   <li 
+                   v-for="(element, index) in lista"        
+                   class="cancellami">
+                        {{element}}
+                        <i 
+                            class="fas fa-trash-alt"@click="remove(index)"
+                        >
+                        </i>
+                    
                        
                    </li>
                    
