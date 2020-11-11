@@ -12,7 +12,7 @@ const cont = new Vue ({
             // 'vai a fare benzina'
         ],
 
-        bool: false,
+        bool: true,
 
     },
 
@@ -21,16 +21,19 @@ const cont = new Vue ({
     },
     methods: {
         add(){
-            this.lista.push(this.modello)
+            if (this.modello.trim() !== '') {
+                this.lista.push(this.modello);
+            }
+            this.modello = '';
         },
         remove(index){
-            this.lista.splice(index);
+            this.lista.splice(index, 1);
         },
         hide(){
             if (this.lista.length == 0) {
-                bool = false;
+                this.bool = false;
             } else {
-                bool = true;
+                this.bool = true;
             }
         }
     }
